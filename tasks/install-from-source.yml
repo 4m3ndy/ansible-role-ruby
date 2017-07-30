@@ -19,7 +19,6 @@
     - libssl-dev
     - libyaml-dev
     - libreadline6-dev
-    - zlib1g-dev
     - libncurses5-dev
     - libffi-dev
     - libgdbm3
@@ -35,7 +34,7 @@
   unarchive:
     src: "{{ workspace }}/ruby-{{ ruby_version }}.tar.gz"
     dest: "{{ workspace }}/"
-    copy: no
+    remote_src: yes
 
 - name: Build ruby.
   command: >
